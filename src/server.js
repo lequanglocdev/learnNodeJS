@@ -1,14 +1,17 @@
 // const express = require('express')
 import express from "express";
 import configViewEngine from "./config/viewEngine";
+import initWebRoute from "./route/web";
+import connection from "./config/connectDB";
 const app = express();
-const port = 3000;
+require('dotenv').config();
+const port = process.env.PORT || 8080;
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 configViewEngine(app);
-
-app.get('/', (req, res) => {
-    res.render('Heder.ejs')
-});
+initWebRoute(app);
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
