@@ -49,6 +49,7 @@ let deleteUser = async (req, res) => {
         message: 'ok'
     })
 }
+
 module.exports = {
-    getAllUser, createUser, updateUser, deleteUser
+    getAllUser, createUser, updateUser, deleteUser,
 }

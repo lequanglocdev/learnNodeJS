@@ -87,3 +87,15 @@ tr:hover {
     color: #fff;
     cursor: pointer;
 }
+
+.uploadFile {
+    padding: 15px;
+}
+
+.uploadFile label {
+    display: block;
+}
+
+.btn-save {
+    margin: 15px 0;
+}
